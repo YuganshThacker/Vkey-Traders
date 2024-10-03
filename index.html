@@ -14,25 +14,37 @@
                 <img id="vlogo" src="images/vlogo.png" alt="logo">
                 <h1><span class="highlight">V</span>key Traders</h1>
             </div>
+
+        <button class="mobile-menu-toggle">☰</button>
+             
             <nav class="main-nav">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Services</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
                     <li><a href="contactus.html">Contact</a></li>
                 </ul>
                 <div class="search-bar">
                     <input type="text" placeholder="Search...">
                     <button>Search</button>
                 </div>
-                <!-- Menu button to add in your HTML -->
-<div class="menu-button" onclick="toggleMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  
             </nav>
+        </div>
+
+        <div class="mobile-menu"> <!-- Mobile menu -->
+            <button class="close-button">&times;</button>
+            <ul>
+                <li><a style="text-decoration: none;" href="#">Home</a></li>
+                <li><a style="text-decoration: none;" href="#">About</a></li>
+                <li><a style="text-decoration: none;" href="#">Services</a></li>
+                <li><a style="text-decoration: none;" href="contactus.html">Contact</a></li>
+                <li><a style="text-decoration: none;" href="products.html">Our Products</a></li>
+                <li><a style="text-decoration: none;" href="download.html">Downloads</a></li>
+                <li><a style="text-decoration: none;" href="#">Key Care</a></li>
+                <li><a style="text-decoration: none;" href="#">Lishi</a></li>
+                <li><a style="text-decoration: none;" href="#">Raise Key <br> Cutters</a></li>
+            
+            </ul>
         </div>
     </header>
     <hr class="nav-separator">
@@ -45,9 +57,9 @@
             <li><a href="download.html">Downloads</a></li>
             <li><a href="#">Raise Key Cutters</a></li>
             <li><a href="#" class="highlight-red">Videos</a></li>
-        </ul>
+        </ul> 
     </nav>
-
+</div>
     <section class="carousel">
         <div class="carousel-container">
             <div class="carousel-slide">
@@ -306,31 +318,29 @@
     filterProducts('all');
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const mainNav = document.querySelector('.main-nav');
+    </script>
 
-    menuToggle.addEventListener('click', function() {
-        mainNav.classList.toggle('active');
-        menuToggle.classList.toggle('active');
+<script>
+   document.addEventListener('DOMContentLoaded', function() {
+    // Get the mobile menu and buttons
+    const menuButton = document.querySelector('.mobile-menu-toggle'); // Use correct class name
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const closeButton = document.querySelector('.close-button');
+
+    // Open menu when menu button is clicked
+    menuButton.addEventListener('click', function() {
+        mobileMenu.classList.add('active');
     });
 
-    // Close menu when a link is clicked
-    const navLinks = document.querySelectorAll('.main-nav a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            mainNav.classList.remove('active');
-            menuToggle.classList.remove('active');
-        });
+    // Close menu when the close button is clicked
+    closeButton.addEventListener('click', function() {
+        mobileMenu.classList.remove('active');
     });
 });
- 
-function toggleMenu() {
-  const menu = document.querySelector('.nav-menu'); /* Assuming your menu has a 'nav-menu' class */
-  menu.classList.toggle('open'); /* Toggle class to show/hide menu */
-}
+
+</script>
 
 
-    </script>
+
 </body>
 </html>
