@@ -157,12 +157,10 @@ body {
 }
 
 .carousel-slide {
-    display: flex; /* Arrange boxes side by side */
+    display: flex;
     min-width: 100%;
-    box-sizing: border-box;
-    
+    box-sizing: border-box;   
 }
-
 .carousel-box {
     width: 400px; /* Set a fixed width for all boxes */
     height: 400px; /* Set a fixed height for all boxes */
@@ -171,25 +169,21 @@ body {
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    background-color: beige !important; /* Force beige background color */
+    background-color: white !important; /* Force beige background color */
     border: 1px solid #ddd; /* Optional: Border color */
     border-radius: 8px; /* Optional: Rounded corners */
 }
-
-
 .carousel-box img {
     width: 100%; /* Make image fill the box */
     height: 100%;
     object-fit: cover; /* Ensure the image covers the box without distortion */
-     background-color: beige;
+     background-color: white;
 
 }
 .carousel-container .carousel-box {
-    background-color: beige;
+    background-color: white;
 }
 
-
-/* Carousel Arrow Styles */
 .carousel-arrow {
     position: absolute;
     top: 50%;
@@ -579,24 +573,85 @@ span {
     }
   }  
   
-
-  @media (max-width: 768px) {
-    .carousel-box {
-      width: 100%; /* Make boxes full-width on mobile */
-      height: auto; /* Allow height to adjust based on content */
-    }
-
-    .carousel-box img {
-      max-width: 100%;
-      height: auto;
-      object-fit: contain; /* Ensure entire image is visible */
-    }
-
-    .carousel-slide {
-      flex-direction: column; /* Stack slides vertically on mobile */
-    }
-  }
   
-  /* You can add more media queries for even smaller screens if needed */
-  
+    @media (max-width: 768px) {
+        .carousel {
+            margin: 20px 0;
+        }
+    
+        .carousel-slide {
+            padding: 0;
+            justify-content: center;
+        }
+    
+        .carousel-box {
+            width: 280px;
+            height: 280px;
+            margin: 0 auto;
+            padding: 10px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            background-color: white !important;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+    
+    
+        /* Show only one image at a time on mobile */
+        .carousel-slide .carousel-box:not(:first-child) {
+            display: none;
+        }
+    
+        .carousel-box img {
+            max-width: 85%;
+            max-height: 85%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }    
+        /* Adjust arrow positions for mobile */
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+    
+        .left-arrow {
+            left: 10px;
+        }
+    
+        .right-arrow {
+            right: 10px;
+        }
 
+
+}
+.carousel-box a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.carousel-box a img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+.carousel-slide .carousel-box:first-child {
+    margin-left: 35px;
+}
