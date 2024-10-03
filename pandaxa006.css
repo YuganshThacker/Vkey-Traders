@@ -1,0 +1,273 @@
+/* Container Flexbox */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 0; /* Reduced padding */
+}
+
+/* Header Styling */
+.header {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo h1 {
+    color: #fff;
+    margin: 0;
+    margin-left: 10px;
+}
+
+.logo .highlight {
+    color: #ff6600;
+}
+
+.logo img {
+    width: 70px; /* Reduced logo size */
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Main Navigation */
+.main-nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav ul li {
+    margin-left: 8px; /* Reduced margin */
+}
+
+.main-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 4px 6px; /* Further reduced padding */
+    display: block;
+}
+
+.main-nav ul li a:hover {
+    color: #ff6600;
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: 10px; /* Reduced margin */
+}
+
+.search-bar input {
+    padding: 4px;
+    border: none;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+.search-bar button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 8px; /* Reduced padding */
+    cursor: pointer;
+}
+
+/* Navigation Separator */
+.nav-separator {
+    border: none;
+    border-top: 2px solid #000; /* Changed to black */
+    margin: 0;
+}
+
+/* Secondary Navigation */
+.secondary-nav {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.secondary-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.secondary-nav ul li {
+    margin: 5px 10px;
+}
+
+.secondary-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+.secondary-nav ul li a.highlight-red {
+    background-color: red;
+    border-radius: 5px;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.header1 {
+    background: linear-gradient(to right, #b91d2d, #ff6600);
+    padding: 30px;
+    color: white;
+    text-align: center;
+}
+
+.header1 h1 {
+    margin: 0;
+    font-size: 3.5rem;
+}
+
+/* Product Section */
+.product-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px;
+    background-color: #f9f9f9;
+}
+
+.product-gallery img {
+    width: 500px;
+    height: 500px;
+    object-fit: contain;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-info {
+    max-width: 600px;
+    margin-left: 40px;
+}
+
+.product-info p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.enquire-btn {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transition for smooth hover effect */
+}
+
+.enquire-btn:hover {
+    background-color: #b91d2d;
+    transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+
+/* Modal Styling */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto; 
+    padding: 50px;
+    border: 1px solid #888;
+    width: 40%; 
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Form styling inside modal */
+.modal-content form input, 
+.modal-content form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: -10px;
+}
+
+.submit-button {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.submit-button:hover {
+    background-color: #b91d2d;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    padding: 10px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.footer .copy {
+    font-size: 14px;
+    margin: 0;
+}
+
+.footer .copy span {
+    color: #ff6600;
+}

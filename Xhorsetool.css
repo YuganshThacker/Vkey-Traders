@@ -1,0 +1,254 @@
+/* Container Flexbox */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 0; /* Reduced padding */
+}
+
+/* Header Styling */
+.header {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo h1 {
+    color: #fff;
+    margin: 0;
+    margin-left: 10px;
+    
+}
+
+.logo .highlight {
+    color: #ff6600;
+}
+
+.logo img {
+    width: 70px; /* Reduced logo size */
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Main Navigation */
+.main-nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav ul li {
+    margin-left: 8px; /* Further reduced margin */
+}
+
+.main-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 4px 6px; /* Further reduced padding */
+     
+    display: block;
+}
+
+.main-nav ul li a:hover {
+    color: #ff6600;
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: 10px; /* Reduced margin */
+}
+
+.search-bar input {
+    padding: 4px;
+    border: none;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+.search-bar button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 8px; /* Reduced padding */
+    cursor: pointer;
+}
+
+/* Navigation Separator */
+.nav-separator {
+    border: none;
+    border-top: 2px solid #000; /* Changed to black */
+    margin: 0;
+}
+
+/* Secondary Navigation */
+.secondary-nav {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.secondary-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.secondary-nav ul li {
+    margin: 5px 10px;
+}
+
+.secondary-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+.secondary-nav ul li a.highlight-red {
+    background-color: red;
+    border-radius: 5px;
+}
+
+/* Add margin between secondary nav and main content */
+.secondary-nav + .categories-container {
+    margin-top: 20px; /* Adjust this value as needed */
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+    .Dimages{
+
+        width: 350px;
+        height: 350px;
+        
+    }
+    .content-container {
+        display: flex;
+        align-items: center; /* Vertically align text with the image */
+        margin-top: 20px; /* Adjust spacing from the previous content */
+    }
+
+    .Dimages {
+        width: 350px;
+        height: 350px;
+        margin-right: 20px; /* Space between the image and the text */
+    }
+
+    .content-list {
+        margin: 0;
+        padding: 0;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center text vertically with respect to the image */
+        margin-left: -20px; /* Adjusts the positioning to the left */
+    }
+
+    #de {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 0px;
+        padding-left: 15px; 
+    }
+
+
+    .content-list p {
+        font-size: 28px; /* Adjust text size as needed */
+        color: #333; /* Adjust text color if needed */
+        margin: 0;
+    margin-bottom: 300px;
+    font-weight:bolder;
+    }
+
+    .devices {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+        font-size: 18px; /* Slightly larger font size for readability */
+        font-weight: 500; /* Medium weight for a clean look */
+        line-height: 1.6; /* Improve readability with line spacing */
+        color: #444; /* Dark gray for a softer look compared to pure black */
+        margin-left: -470px;
+        margin-top: 50px;
+    }
+
+    .devices li {
+        margin-bottom: 10px; /* Add space between list items */
+    }
+
+    .devices p {
+        margin: 0;
+        padding-left: 15px; /* Slight indentation for text inside list items */
+    }
+    .con {
+        margin-left: 750px;
+    }
+    
+    .download-btn1, .download-btn2 {
+        background-color: #ff6600;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s, transform 0.3s; /* Smooth hover transition */
+        display: block; /* Ensure button stays inline */
+        margin-top: 10px; /* Adjust margin as needed for spacing */
+        margin-left: 0; /* Ensure the button is aligned to the left under the text */
+    }
+    
+    .download-btn1 {
+        margin-top: 15px; /* Adjusts the button positioning under Xhorse Update Tool */
+        margin-bottom: 20px;
+    }
+    
+    .download-btn2 {
+        margin-top: 15px; /* Adjusts the button positioning under Xhorse XP-005 Dolphin Drivers */
+    }
+    
+    .download-btn1:hover, .download-btn2:hover {
+        background-color: #e65500; /* Darker shade on hover */
+        transform: translateY(-3px); /* Slight upward movement on hover */
+    }
+    
+
+
+    .footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+    
+    .copy {
+        text-align: center;
+        padding: 10px 0;
+    }
+    span {
+        color: #ff6c00;
+    }   

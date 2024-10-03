@@ -1,0 +1,246 @@
+/* Container Flexbox */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 0; /* Reduced padding */
+}
+
+/* Header Styling */
+.header {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo h1 {
+    color: #fff;
+    margin: 0;
+    margin-left: 10px;
+    
+}
+
+.logo .highlight {
+    color: #ff6600;
+}
+
+.logo img {
+    width: 70px; /* Reduced logo size */
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Main Navigation */
+.main-nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav ul li {
+    margin-left: 8px; /* Further reduced margin */
+}
+
+.main-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 4px 6px; /* Further reduced padding */
+     
+    display: block;
+}
+
+.main-nav ul li a:hover {
+    color: #ff6600;
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: 10px; /* Reduced margin */
+}
+
+.search-bar input {
+    padding: 4px;
+    border: none;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+.search-bar button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 8px; /* Reduced padding */
+    cursor: pointer;
+}
+
+/* Navigation Separator */
+.nav-separator {
+    border: none;
+    border-top: 2px solid #000; /* Changed to black */
+    margin: 0;
+}
+
+/* Secondary Navigation */
+.secondary-nav {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.secondary-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.secondary-nav ul li {
+    margin: 5px 10px;
+}
+
+.secondary-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+.secondary-nav ul li a.highlight-red {
+    background-color: red;
+    border-radius: 5px;
+}
+
+/* Add margin between secondary nav and main content */
+.secondary-nav + .categories-container {
+    margin-top: 20px; /* Adjust this value as needed */
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.content-container {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.vimages {
+    margin-top: 50px;
+    width: 400px;
+    height: auto;
+}
+
+.content-list {
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+}
+
+.content-list p {
+    font-size: 28px;
+    color: #333;
+    margin: 0;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.features-container {
+    margin-top: -230px;
+    margin-left: 410px;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.features-container h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.devices {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #444;
+    margin: 0;
+    padding: 0;
+}
+
+.devices li {
+    margin-bottom: 10px;
+}
+
+.download-container {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.downloads {
+    list-style: none;
+    padding: 0;
+}
+
+.downloads li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.download-btn1 {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 10px auto;
+    display: inline-block;
+}
+
+.download-btn1:hover {
+    background-color: #e65500;
+    transform: translateY(-3px);
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.copy {
+    margin: 0;
+    font-size: 16px;
+    padding: 10px 0;
+}
+
+span {
+    color: #ff6600;
+}

@@ -1,0 +1,244 @@
+/* General Styling */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 0; 
+}
+
+.header {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo h1 {
+    color: #fff;
+    margin: 0;
+    margin-left: 10px;
+}
+
+.logo .highlight {
+    color: #ff6600;
+}
+
+.logo img {
+    width: 70px;
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Main Navigation */
+.main-nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav ul li {
+    margin-left: 8px; 
+}
+
+.main-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 4px 6px;
+    display: block;
+}
+
+.main-nav ul li a:hover {
+    color: #ff6600;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: 10px; 
+}
+
+.search-bar input {
+    padding: 4px;
+    border: none;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+.search-bar button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 8px;
+    cursor: pointer;
+}
+
+.nav-separator {
+    border: none;
+    border-top: 2px solid #000;
+    margin: 0;
+}
+
+.secondary-nav {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.secondary-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.secondary-nav ul li {
+    margin: 5px 10px;
+}
+
+.secondary-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+.secondary-nav ul li a.highlight-red {
+    background-color: red;
+    border-radius: 5px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contact Header Section */
+.contact-header {
+    background: linear-gradient(to right, #ff6600, #ff3300);
+    padding: 40px 0;
+    text-align: center;
+    color: white;
+}
+
+.contact-header h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+/* Contact Info Section */
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.get-in-touch, .send-message {
+    width: 45%;
+}
+
+h2 {
+    color: #ff3300;
+    margin-bottom: 20px;
+}
+
+
+form {
+    background-color: #fff8f0; 
+    padding: 30px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    background-color: #f08200;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;  
+}
+
+button:hover {
+    background-color: #ff6600;
+}
+.get-in-touch img {
+    width: 25px;  
+    height: auto; 
+   display: flex;
+    margin: 20px 0;  
+}
+
+.social-icons {
+    display: flex;
+    justify-content: left; 
+    align-items: left;     
+    margin-top: 10px;
+}
+
+.social-icons a img {
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+}
+
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: -25px; 
+    margin-top: -20px;
+}
+
+.contact-item img {
+    width: 25px; 
+    margin-right: 10px;  
+}
+
+
+.contact-item a {
+    text-decoration: none;
+    color: #000;  
+    font-weight: 500;
+}
+
+

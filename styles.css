@@ -1,0 +1,446 @@
+/* Container Flexbox */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 0; /* Reduced padding */
+}
+
+/* Header Styling */
+.header {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo h1 {
+    color: #fff;
+    margin: 0;
+    margin-left: 10px;
+    
+}
+
+.logo .highlight {
+    color: #ff6600;
+}
+
+.logo img {
+    width: 70px; /* Reduced logo size */
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Main Navigation */
+.main-nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav ul li {
+    margin-left: 8px; /* Further reduced margin */
+}
+
+.main-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 4px 6px; /* Further reduced padding */
+     
+    display: block;
+}
+
+.main-nav ul li a:hover {
+    color: #ff6600;
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: 10px; /* Reduced margin */
+}
+
+.search-bar input {
+    padding: 4px;
+    border: none;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+.search-bar button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 8px; /* Reduced padding */
+    cursor: pointer;
+}
+
+/* Navigation Separator */
+.nav-separator {
+    border: none;
+    border-top: 2px solid #000; /* Changed to black */
+    margin: 0;
+}
+
+/* Secondary Navigation */
+.secondary-nav {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.secondary-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.secondary-nav ul li {
+    margin: 5px 10px;
+}
+
+.secondary-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+.secondary-nav ul li a.highlight-red {
+    background-color: red;
+    border-radius: 5px;
+}
+
+/* Add margin between secondary nav and main content */
+.secondary-nav + .categories-container {
+    margin-top: 20px; /* Adjust this value as needed */
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+/* Carousel */
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 50px 0;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform; /* Added to improve performance */
+}
+
+.carousel-slide {
+    display: flex; /* Arrange boxes side by side */
+    min-width: 100%;
+    box-sizing: border-box;
+    
+}
+
+.carousel-box {
+    width: 400px; /* Set a fixed width for all boxes */
+    height: 400px; /* Set a fixed height for all boxes */
+    overflow: hidden; /* Hide any overflow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: beige !important; /* Force beige background color */
+    border: 1px solid #ddd; /* Optional: Border color */
+    border-radius: 8px; /* Optional: Rounded corners */
+}
+
+
+.carousel-box img {
+    width: 100%; /* Make image fill the box */
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the box without distortion */
+     background-color: beige;
+
+}
+.carousel-container .carousel-box {
+    background-color: beige;
+}
+
+
+/* Carousel Arrow Styles */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 18px;
+    border-radius: 3px;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+.carousel-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+/* About Us Section */
+.about-us {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.about-us .container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 300px;
+}
+
+.about-us h2 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #333;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+}
+
+.about-us p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+}
+
+.about-us .know-more-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-us .know-more-btn:hover {
+    background-color: #e65500;
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+    .about-us {
+        flex-direction: column;
+    }
+
+    .about-us .content {
+        text-align: center;
+    }
+
+    .about-us p {
+        max-width: 500px;
+    }
+}
+
+
+/* Services */
+.services {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.services h2 {
+    margin-bottom: 20px;
+}
+
+.service-box {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.service-box h3 {
+    margin-top: 0;
+}
+/* Our Products Section */
+.our-products {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.our-products h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.product-categories {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.category-btn {
+    background-color: #f4f4f4;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.category-btn.active, .category-btn:hover {
+    background-color: #ff6600;
+    color: #fff;
+}
+
+.product-grid {
+    display: flex; /* This aligns the product items horizontally */
+    flex-wrap: wrap; /* This ensures items wrap to the next line if there's not enough space */
+    justify-content: space-around; /* Distributes space between items evenly */
+    gap: 20px; /* Adds some space between product items */
+}
+
+.product-item {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-left: 20px;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+    max-width: 100%;
+    height: 300px; /* Fixed height for all images */
+    object-fit: contain; /* Ensure the entire image is visible */
+    margin-bottom: 15px;
+}
+
+.product-item h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.see-more-btn {
+    display: block;
+    margin: 30px auto 0;
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.see-more-btn:hover {
+    background-color: #e65500;
+}
+
+@media (max-width: 768px) {
+    .product-categories {
+        flex-wrap: wrap;
+    }
+    
+    .category-btn {
+        margin: 5px;
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.copy {
+    text-align: center;
+    padding: 10px 0;
+}
+span {
+    color: #ff6c00;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .carousel-box {
+        width: 100%; /* Adjust box width for smaller screens */
+        height: auto; /* Adjust height based on content */
+    }
+
+    .search-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-bar input {
+        margin-bottom: 10px; /* Add space below input */
+    }
+}
