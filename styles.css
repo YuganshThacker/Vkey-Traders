@@ -398,6 +398,41 @@ body {
     transition: background-color 0.3s ease;
 }
 
+.menu-button {
+    display: block; /* Show menu button on mobile */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.menu-button span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: #fff;
+    transition: 0.4s;
+}
+.close-button {
+    position: absolute;
+    top: 20px; /* Adjust if too close to the top */
+    right: 20px; /* Adjust distance from the right */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px; /* Increase font size for visibility */
+    cursor: pointer;
+    z-index: 1100; /* Ensure it's on top of other elements */
+}
+
+.close-button:hover {
+    color: #ff6600;
+}
+
 .see-more-btn:hover {
     background-color: #e65500;
 }
@@ -428,68 +463,137 @@ span {
     color: #ff6c00;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .carousel-box {
-        width: 100%; /* Adjust box width for smaller screens */
-        height: auto; /* Adjust height based on content */
-    }
-
-    .search-bar {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .search-bar input {
-        margin-bottom: 10px; /* Add space below input */
-    }
+.mobile-menu {
+    display: none; /* Hide by default */
 }
 
-/* Base styles (assumed to be already present) */
 
-/* Add the hamburger menu button */
-.menu-button {
-    display: none; /* Hidden by default */
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 1000; /* Make sure it's on top */
-  }
-  
-  /* Style the menu icon */
-  .menu-button span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px 0;
-    background-color: #333; /* Change color as needed */
-  }
-  
-  /* Media query for mobile devices (up to 768px width) */
   @media (max-width: 768px) {
-  
-    /* Show the menu button on mobile */
+
+    @media (max-width: 768px) {
+        .mobile-menu {
+            display: block; /* Show the mobile menu on small screens */
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 250px; /* Adjust the width as needed */
+            height: 100%;
+            background-color: #1c1c1c;
+            padding: 20px;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            transition: right 0.3s ease;
+            transition: transform 0.3s ease; /* Smooth transition */
+            transform: translateX(100%); /* Start off-screen */
+        }
+
+
+
+    
+        .mobile-menu.active {
+            
+            transform: translateX(0); /* Slide in */
+        }
+
+        .mobile-menu ul {
+            list-style: none; /* Remove default bullet points */
+            padding: 20px 0; /* Add vertical padding */
+            margin: 0; /* Remove default margin */
+        }
+        .mobile-menu ul li {
+            margin: 15px 0; /* Add margin between items */
+        }
+
+        .mobile-menu.active ul li a{
+            color: #ff6600; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Font size */
+    padding: 10px 15px; /* Add padding */
+    border-radius: 5px; /* Rounded corners */
+    display: block; /* Make the link fill the list item */
+    transition: background-color 0.3s ease;
+        }
+
+        .mobile-menu ul li a:hover {
+            background-color: rgba(255, 102, 0, 0.1); /* Light background on hover */
+            color: #ffffff; /* Change text color on hover */
+        }
+        
+        /* Active link state */
+        .mobile-menu ul li a.active {
+            font-weight: bold; /* Make active link bold */
+            background-color: rgba(255, 102, 0, 0.3); /* Slightly darker background */
+        }
+    }
+    
+    .main-nav {
+        display: none; /* Hide menu by default */
+        position: fixed;
+        right: -100%; /* Off-screen to the right */
+        top: 0;
+        height: 100%;
+        width: 250px;
+        background-color: #333;
+        flex-direction: column;
+        justify-content: center;
+        transition: right 0.3s ease-in-out;
+        z-index: 999; /* Ensure it's above other content */
+    }
+
+    .main-nav.active {
+        display: flex; /* Change from display: none to display: flex */
+        right: 0; /* Slide into view when active */
+    }
+
+    /* Issue: This line won't work as intended. 
+       `display: flex` must be set for `.main-nav.active` to show the menu */
+    /* .main-nav.active {
+        right: 0; 
+    } */
+
+    .main-nav ul {
+        flex-direction: column; /* Ensure menu items stack vertically */
+        text-align: center; /* Center the menu items */
+    }
+
+    .main-nav ul li {
+        margin: 15px 0; /* Space between menu items */
+        
+    }
+
     .menu-button {
-      display: block;
+        display: block; /* Show menu button on mobile */
     }
-  
-    /* Adjust sizes for mobile */
-    .box {
-      width: 100%; /* Make boxes full-width */
-      margin: 10px 0; /* Add some spacing between boxes */
+
+    .secondary-nav {
+        display: none; /* Hide secondary nav on mobile */
     }
-  
-    /* Adjust text size for mobile */
-    .text {
-      font-size: 16px; /* Adjust based on preference */
+    #vlogo img{
+        margin-left: -30px;
+        margin-bottom: -30px;
     }
+    .logo h1{
+
+        font-size: 28px;
+        margin-left: -10px;
+    }
+  }  
   
-    /* Ensure images are responsive */
-    img {
+
+  @media (max-width: 768px) {
+    .carousel-box {
+      width: 100%; /* Make boxes full-width on mobile */
+      height: auto; /* Allow height to adjust based on content */
+    }
+
+    .carousel-box img {
       max-width: 100%;
       height: auto;
+      object-fit: contain; /* Ensure entire image is visible */
+    }
+
+    .carousel-slide {
+      flex-direction: column; /* Stack slides vertically on mobile */
     }
   }
   
