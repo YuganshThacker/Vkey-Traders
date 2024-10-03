@@ -25,6 +25,13 @@
                     <input type="text" placeholder="Search...">
                     <button>Search</button>
                 </div>
+                <!-- Menu button to add in your HTML -->
+<div class="menu-button" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  
             </nav>
         </div>
     </header>
@@ -298,6 +305,32 @@
     // Initial filter
     filterProducts('all');
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+
+    menuToggle.addEventListener('click', function() {
+        mainNav.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+    });
+
+    // Close menu when a link is clicked
+    const navLinks = document.querySelectorAll('.main-nav a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mainNav.classList.remove('active');
+            menuToggle.classList.remove('active');
+        });
+    });
+});
+ 
+function toggleMenu() {
+  const menu = document.querySelector('.nav-menu'); /* Assuming your menu has a 'nav-menu' class */
+  menu.classList.toggle('open'); /* Toggle class to show/hide menu */
+}
+
+
     </script>
 </body>
 </html>
