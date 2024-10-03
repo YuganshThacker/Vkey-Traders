@@ -217,58 +217,108 @@
     </footer>
 
     <script>
-        const carouselContainer = document.querySelector('.carousel-container');
-        const carouselSlides = document.querySelectorAll('.carousel-slide');
-        let currentIndex = 1; 
-        const totalSlides = carouselSlides.length;
+       document.addEventListener('DOMContentLoaded', function() {
+    const carouselContainer = document.querySelector('.carousel-container');
+    const carouselSlides = document.querySelectorAll('.carousel-slide');
+    let currentIndex = 1;
+    const totalSlides = carouselSlides.length;
+    let isMobile = window.innerWidth <= 768;
 
-        
-        const firstSlideClone = carouselSlides[0].cloneNode(true);
-        const lastSlideClone = carouselSlides[totalSlides - 1].cloneNode(true);
+    // Clone first and last slides for infinite loop
+    const firstSlideClone = carouselSlides[0].cloneNode(true);
+    const lastSlideClone = carouselSlides[totalSlides - 1].cloneNode(true);
 
-        carouselContainer.appendChild(firstSlideClone);
-        carouselContainer.insertBefore(lastSlideClone, carouselSlides[0]);
+    carouselContainer.appendChild(firstSlideClone);
+    carouselContainer.insertBefore(lastSlideClone, carouselSlides[0]);
 
-       
+    // Set initial position
+    updateCarouselWidth();
+    carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+    function updateCarouselWidth() {
         carouselContainer.style.width = `${(totalSlides + 2) * 100}%`;
+    }
 
-       
-        carouselContainer.style.transform = `translateX(-100%)`;
+    function updateCarouselPosition() {
+        carouselContainer.style.transition = 'transform 0.5s ease-in-out';
+        carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
 
-        function updateCarouselPosition() {
-            carouselContainer.style.transition = 'transform 0.5s ease-in-out';
-            carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+        // Handle infinite scroll
+        if (currentIndex === 0) {
+            setTimeout(() => {
+                carouselContainer.style.transition = 'none';
+                currentIndex = totalSlides;
+                carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }, 500);
+        } else if (currentIndex === totalSlides + 1) {
+            setTimeout(() => {
+                carouselContainer.style.transition = 'none';
+                currentIndex = 1;
+                carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }, 500);
+        }
+    }
 
-           
-            if (currentIndex === 0) {
-                setTimeout(() => {
-                    carouselContainer.style.transition = 'none';
-                    currentIndex = totalSlides;
-                    carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
-                }, 500);
-            } else if (currentIndex === totalSlides + 1) {
-                setTimeout(() => {
-                    carouselContainer.style.transition = 'none';
-                    currentIndex = 1; 
-                    carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
-                }, 500);
+    // Handle window resize
+    window.addEventListener('resize', function() {
+        const wasMobile = isMobile;
+        isMobile = window.innerWidth <= 768;
+        
+        if (wasMobile !== isMobile) {
+            updateCarouselWidth();
+            updateCarouselPosition();
+        }
+    });
+
+    // Navigation functions
+    function moveToNextSlide() {
+        currentIndex++;
+        updateCarouselPosition();
+    }
+
+    function moveToPrevSlide() {
+        currentIndex--;
+        updateCarouselPosition();
+    }
+
+    // Event listeners
+    document.querySelector('.right-arrow').addEventListener('click', moveToNextSlide);
+    document.querySelector('.left-arrow').addEventListener('click', moveToPrevSlide);
+
+    // Touch events for mobile swipe
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    carouselContainer.addEventListener('touchstart', e => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+
+    carouselContainer.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const difference = touchStartX - touchEndX;
+
+        if (Math.abs(difference) > swipeThreshold) {
+            if (difference > 0) {
+                moveToNextSlide();
+            } else {
+                moveToPrevSlide();
             }
         }
+    }
 
-        function moveToNextSlide() {
-            currentIndex++;
-            updateCarouselPosition();
-        }
+    // Auto-play
+    const autoPlayInterval = setInterval(moveToNextSlide, 3000);
 
-        function moveToPrevSlide() {
-            currentIndex--;
-            updateCarouselPosition();
-        }
-
-        document.querySelector('.right-arrow').addEventListener('click', moveToNextSlide);
-        document.querySelector('.left-arrow').addEventListener('click', moveToPrevSlide);
-
-        setInterval(moveToNextSlide, 3000);
+    // Stop auto-play on user interaction
+    carouselContainer.addEventListener('touchstart', () => clearInterval(autoPlayInterval));
+    document.querySelector('.right-arrow').addEventListener('click', () => clearInterval(autoPlayInterval));
+    document.querySelector('.left-arrow').addEventListener('click', () => clearInterval(autoPlayInterval));
+});
 
         
         document.addEventListener('DOMContentLoaded', function() {
