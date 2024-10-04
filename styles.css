@@ -9,6 +9,10 @@
     padding: 10px 0; /* Reduced padding */
 }
 
+.menu-button {
+    display: none;
+}
+
 /* Header Styling */
 .header {
     background-color: #333;
@@ -427,6 +431,10 @@ body {
     color: #ff6600;
 }
 
+.menu-button {
+    display: none;
+}
+
 .see-more-btn:hover {
     background-color: #e65500;
 }
@@ -481,9 +489,54 @@ span {
             transform: translateX(100%); /* Start off-screen */
         }
 
-
-
-    
+        .search-barmobile {
+            display: flex;
+            align-items: center;
+            max-width: 400px;
+            margin: 20px 20px 15px 15px;
+            background-color: #f8f8f8;
+            border: 1px solid #e0e0e0;
+            border-radius: 25px; /* Rounded corners for the entire bar */
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .search-barmobile input {
+            flex-grow: 1;
+            padding: 12px 20px; /* Increased left padding for better text alignment */
+            border: none;
+            background-color: transparent;
+            font-size: 16px;
+            color: #333;
+            outline: none;
+        }
+        
+        .search-barmobile input::placeholder {
+            color: #999;
+            
+        }
+        
+        .search-barmobile button {
+            background-color: #ff6600;
+            color: white;
+            border: none;
+            padding: 12px 12px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 25px 25px 25px 25px; /* Rounded corners on the right side of the button */
+        }
+        
+        .search-barmobile button:hover {
+            background-color: #e55c00;
+        }
+        
+        .search-barmobile button svg {
+            width: 20px;
+            height: 20px;
+        }
         .mobile-menu.active {
             
             transform: translateX(0); /* Slide in */
@@ -654,4 +707,44 @@ span {
 }
 .carousel-slide .carousel-box:first-child {
     margin-left: 35px;
+}
+
+@media (max-width: 768px) {
+    .about-us {
+        width: 500px;
+        margin-left: 70px;
+        padding: 30px 15px;
+    }
+
+    .about-us h2 {
+        font-size: 43px;
+    }
+
+    .about-us p {
+        font-size: 1.1em;
+    }
+    .know-more-btn{
+        margin-left: 25px;
+    }
+
+    .our-products h2{
+
+        margin-left: 70px;
+    }
+
+    .product-item{
+
+        margin-right: 16px;
+    }
+
+    .footer{
+
+        margin-left: -370px;
+    }
+}
+
+@media (min-width: 769px) {
+    .main-nav {
+        display: flex !important;
+    }
 }
