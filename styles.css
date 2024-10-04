@@ -711,22 +711,32 @@ span {
 
 @media (max-width: 768px) {
     .about-us {
-        width: 500px;
-        margin-left: 70px;
-        padding: 30px 15px;
+        width: 100%; /* Override fixed width */
+        margin-left: 0; /* Remove left margin */
+        padding: 30px 20px; /* Adjust padding */
+        box-sizing: border-box;
+    }
+
+    .about-us .container {
+        padding: 0 15px;
+        margin: 0 auto;
     }
 
     .about-us h2 {
-        font-size: 43px;
+        font-size: 32px; /* Slightly reduced font size */
+        width: 100%;
+        text-align: left;
     }
 
     .about-us p {
         font-size: 1.1em;
-    }
-    .know-more-btn{
-        margin-left: 25px;
+        width: 100%;
     }
 
+    .know-more-btn {
+        margin-left: 0; /* Remove margin */
+        align-self: flex-start; /* Align button to the left */
+    }
     .our-products h2{
 
         margin-left: 70px;
