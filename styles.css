@@ -153,7 +153,9 @@ body {
     overflow: hidden;
     margin: 50px 0;
 }
-
+.search-barmobile{
+    display: none;
+}
 .carousel-container {
     display: flex;
     transition: transform 0.5s ease-in-out;
@@ -499,6 +501,7 @@ span {
             border-radius: 25px; /* Rounded corners for the entire bar */
             overflow: hidden;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-family: 'Poppins', sans-serif;
         }
         
         .search-barmobile input {
@@ -527,6 +530,7 @@ span {
             align-items: center;
             justify-content: center;
             border-radius: 25px 25px 25px 25px; /* Rounded corners on the right side of the button */
+            font-family: 'Poppins', sans-serif;
         }
         
         .search-barmobile button:hover {
@@ -667,26 +671,31 @@ span {
         }    
         /* Adjust arrow positions for mobile */
         .carousel-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
+            top: 50%; /* Vertically center the arrows */
+            transform: translateY(-50%); /* Adjust for the correct vertical alignment */
             width: 40px;
             height: 40px;
             background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            border: none;
             border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 20px;
-            cursor: pointer;
-            z-index: 1000;
+            z-index: 10;
+            
         }
     
         .left-arrow {
-            left: 10px;
+            left: 5%;
+        
         }
     
         .right-arrow {
-            right: 10px;
+            right: 5%;
+        }
+        .carousel-box {
+            margin: 0 auto;
+            text-align: center;
         }
 
 
