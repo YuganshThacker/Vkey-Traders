@@ -206,6 +206,14 @@ body {
     background-color: rgba(0, 0, 0, 0.4); 
 }
 
+.search-barmobile{
+    display: none;
+}
+
+.menubtn{
+    display: none;
+}
+
 .modal-content {
     background-color: #fff;
     margin: 10% auto; 
@@ -288,6 +296,10 @@ body {
     .mobile-menu {
         display: block; /* Ensure the mobile menu shows when active */
     }
+    .menubtn{
+        display: block;
+    }
+
     .container {
         position: relative;
     }
@@ -483,7 +495,7 @@ body {
         cursor: pointer;
     }
     .footer{
-        margin-left: -370px;
+        margin-left: -425px;
     }
 
     .header1 h1{
