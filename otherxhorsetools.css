@@ -82,6 +82,10 @@
     margin-right: 5px;
 }
 
+.menubtn{
+    display: none;
+}
+
 .search-bar button {
     background-color: #ff6600;
     color: #fff;
@@ -204,4 +208,9 @@ body {
 
 span {
     color: #ff6c00;
+}
+@media (max-width: 768px){
+    .menubtn{
+        display: block;
+    }
 }
