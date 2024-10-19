@@ -83,6 +83,10 @@
     margin-right: 5px;
 }
 
+.menubtn{
+    display: none;
+}
+
 .search-bar button {
     background-color: #ff6600;
     color: #fff;
@@ -243,6 +247,9 @@ span {
     transition: top 0.4s ease;
     z-index: 2;
 }
+.search-barmobile{
+    display: none;
+}
 
 .product-item:hover .enquire-overlay .enquire-overlay1 {
     top: 0; /* Slide the overlay up to cover the box */
@@ -251,4 +258,9 @@ span {
 .product-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px){
+    .menubtn{
+        display: block;
+    }
 }
