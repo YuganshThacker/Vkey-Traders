@@ -437,11 +437,6 @@ body {
         right: 0; /* Slide into view when active */
     }
 
-    /* Issue: This line won't work as intended. 
-       `display: flex` must be set for `.main-nav.active` to show the menu */
-    /* .main-nav.active {
-        right: 0; 
-    } */
 
     .mobile-menu ul {
         list-style: none;
@@ -508,8 +503,6 @@ body {
         padding: 20px;
     
     }
-
-    
 
     .product-info {
         margin-left: 0;
