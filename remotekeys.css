@@ -52,6 +52,10 @@
     align-items: center;
 }
 
+.menubtn{
+    display: none;
+}
+
 .main-nav ul li {
     margin-left: 8px; /* Further reduced margin */
 }
@@ -123,6 +127,9 @@
     text-decoration: none;
     padding: 10px 20px;
     display: block;
+}
+.search-barmobile{
+    display: none;
 }
 
 .secondary-nav ul li a.highlight-red {
@@ -221,6 +228,10 @@ span {
 
     .mobile-menu {
         display: block; /* Ensure the mobile menu shows when active */
+    }
+
+    .menubtn{
+        display: block;
     }
     .container {
         position: relative;
