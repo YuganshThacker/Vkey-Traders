@@ -14,6 +14,7 @@
                 <img id="vlogo" src="images/vlogo.png" alt="logo">
                 <h1><span class="highlight">V</span>key Traders</h1>
             </div>
+            <div class="menubtn"><button class="mobile-menu-toggle">☰</button></div>
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -28,7 +29,29 @@
             </nav>
         </div>
     </header>
+    <div class="mobile-menu"> <!-- Mobile menu -->
+        <button class="close-button">&times;</button>
+        <ul>
+            <li><a style="text-decoration: none;" href="#">Home</a></li>
+            <li><a style="text-decoration: none;" href="#">About</a></li>
+            <li><a style="text-decoration: none;" href="#">Services</a></li>
+            <li><a style="text-decoration: none;" href="contactus.html">Contact</a></li>
+            <li><a style="text-decoration: none;" href="products.html">Our Products</a></li>
+            <li><a style="text-decoration: none;" href="download.html">Downloads</a></li>
+            <li><a style="text-decoration: none;" href="#">Key Care</a></li>
+            <li><a style="text-decoration: none;" href="#">Lishi</a></li>
+            <li><a style="text-decoration: none;" href="#">Raise Key <br> Cutters</a></li>
+        
+        </ul>
+    </div>
+    
     <hr class="nav-separator">
+        
+    <div class="search-barmobile">
+        <input type="text" placeholder="Search...">
+        <button>Search</button>
+    </div>
+
     <nav class="secondary-nav">
         <ul>
             <li><a href="#">Categories</a></li>
@@ -40,7 +63,8 @@
             <li><a href="#" class="highlight-red">Videos</a></li>
         </ul>
     </nav>
-    <hr class="nav-separator">
+    <div class="mobile-container">
+    
     <div class="content-container">
         <img class="vimages" src="images/vvdi2.png" alt="Image">
         <ul class="content-list">
@@ -64,17 +88,41 @@
     <div style="margin-top: 60px; margin-bottom: 70px;"  class="download-container">
         <ul  class="downloads">
             <li>VVDI2 Configuration File V1.0.0(335.44MB)</li>
-            <a style="text-decoration: none;" href="softwares/VVDI2-Configuration FileV100.exe"><button class="download-btn1">Download</button></a>
+            <a style="text-decoration: none;" href="softwares/VVDI2-Configuration FileV100.exe"><div class="btn"><button class="download-btn1">Download</button></a></div>
             <li>VVDI2 Installer V7.3.6(336.40MB)</li>
-           <a style="text-decoration: none;" href="softwares/VVDI2-InstallerV735_V2.exe"> <button class="download-btn1">Download</button></a>
+           <a style="text-decoration: none;" href="softwares/VVDI2-InstallerV735_V2.exe"> <div class="btn"><button class="download-btn1">Download</button></a></div>
             
         </ul>
     </div>
+</div>
     <hr class="nav-separator">
     <footer class="footer">
         <div class="container">
-            <p style="margin-left: 370px;" class="copy" >&copy; 2024  <span>V</span>key Traders. All rights reserved.</p>
+            <p style="margin-left: 430px;" class="copy" >&copy; 2024  <span>V</span>key Traders. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            const closeButton = document.querySelector('.close-button');
+            const mobileMenu = document.querySelector('.mobile-menu');
+        
+            menuToggle.addEventListener('click', function () {
+                mobileMenu.classList.add('active');
+            });
+        
+            closeButton.addEventListener('click', function () {
+                mobileMenu.classList.remove('active');
+            });
+        
+            // Close menu when clicking outside
+            document.addEventListener('click', function (event) {
+                if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+                    mobileMenu.classList.remove('active');
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>
