@@ -106,5 +106,27 @@
             <p style="margin-left: 430px;" class="copy" >&copy; 2024  <span>V</span>key Traders. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            const closeButton = document.querySelector('.close-button');
+            const mobileMenu = document.querySelector('.mobile-menu');
+        
+            menuToggle.addEventListener('click', function () {
+                mobileMenu.classList.add('active');
+            });
+        
+            closeButton.addEventListener('click', function () {
+                mobileMenu.classList.remove('active');
+            });
+        
+            // Close menu when clicking outside
+            document.addEventListener('click', function (event) {
+                if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+                    mobileMenu.classList.remove('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
