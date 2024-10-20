@@ -9,7 +9,6 @@
     padding: 10px 0; /* Reduced padding */
 }
 
-
 /* Header Styling */
 .header {
     background-color: #333;
@@ -143,123 +142,126 @@ body {
     margin: 0;
     padding: 0;
 }
+    .Dimages{
 
-.vimages {
-    margin-top: 50px;
-    width: 400px;
-    height: auto;
-}
+        width: 350px;
+        height: 350px;
+        
+    }
+    .content-container {
+        display: flex;
+        align-items: center; /* Vertically align text with the image */
+        margin-top: 20px; /* Adjust spacing from the previous content */
+    }
 
-.content-container {
-    display: flex;
-    align-items: flex-start; /* Align items to the top */
-    margin-top: 20px;
-}
+    .Dimages {
+        width: 350px;
+        height: 350px;
+        margin-right: 20px; /* Space between the image and the text */
+    }
 
-.content-list {
-    margin: 0;
-    padding: 0;
-    margin-left: 20px;
-}
+    .content-list {
+        margin: 0;
+        padding: 0;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center text vertically with respect to the image */
+        margin-left: -20px; /* Adjusts the positioning to the left */
+    }
 
-.content-list p {
-    font-size: 28px;
-    color: #333;
-    margin: 0;
-    font-weight: bolder;
-    margin-left: 10px;
-    margin-top: 20px;
-}
-
-/* Ensure proper alignment and spacing for the features section */
-.features-container {
-   margin-top: -230px; /* Space between the VVDI MB and the features section */
-    margin-left: 410px; /* Center the features container */
-    margin-right: auto; /* Center the features container */
-    max-width: 800px; /* Optional: Limit the width of the features section */
-    padding: 0 20px; /* Add horizontal padding if needed */
-}
-
-.features-container h1 {
-    font-size: 24px; /* Adjust as needed */
-    color: #333; /* Ensure the color matches the theme */
-    margin-bottom: 10px; /* Space below the heading */
-}
-
-.menubtn{
-    display: none;
-}
-
-.devices {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
-    font-size: 18px; /* Font size for list items */
-    font-weight: 500; /* Medium weight for readability */
-    line-height: 1.6; /* Improve readability */
-    color: #444; /* Dark gray color for text */
-    margin: 0; /* Remove default margins */
-    padding: 0; /* Remove default padding */
-}
-
-.devices li {
-    margin-bottom: 10px; /* Space between list items */
-}
+    #de {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 0px;
+        padding-left: 15px; 
+    }
 
 
-.download-container {
-    margin-top: 30px;
-    text-align: center;
-}
+    .content-list p {
+        font-size: 28px; /* Adjust text size as needed */
+        color: #333; /* Adjust text color if needed */
+        margin: 0;
+    margin-bottom: 300px;
+    font-weight:bolder;
+    }
 
-.downloads {
-    list-style: none;
-    padding: 0;
-}
+    .devices {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+        font-size: 18px; /* Slightly larger font size for readability */
+        font-weight: 500; /* Medium weight for a clean look */
+        line-height: 1.6; /* Improve readability with line spacing */
+        color: #444; /* Dark gray for a softer look compared to pure black */
+        margin-left: -470px;
+        margin-top: 50px;
+    }
 
-.downloads li {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
+    .devices li {
+        margin-bottom: 10px; /* Add space between list items */
+    }
 
-.download-btn1, .download-btn2 {
-    background-color: #ff6600;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s, transform 0.3s;
-    display: block;
-    margin: 10px auto;
-}
+    .devices p {
+        margin: 0;
+        padding-left: 15px; /* Slight indentation for text inside list items */
+    }
+    .con {
+        margin-left: 750px;
+    }
 
-.download-btn1:hover, .download-btn2:hover {
-    background-color: #e65500;
-    transform: translateY(-3px);
-}
+    .menubtn{
+        display: none;
+    }
 
-.footer {
-    background-color: #333;
-    color: #fff;
-    text-align:center;
-    padding: 20px 0;
+    .search-barmobile{
+        display: none;
+    }
     
-}
+    .download-btn1, .download-btn2 {
+        background-color: #ff6600;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s, transform 0.3s; /* Smooth hover transition */
+        display: block; /* Ensure button stays inline */
+        margin-top: 10px; /* Adjust margin as needed for spacing */
+        margin-left: 0; /* Ensure the button is aligned to the left under the text */
+    }
+    
+    .download-btn1 {
+        margin-top: 15px; /* Adjusts the button positioning under Xhorse Update Tool */
+        margin-bottom: 20px;
+    }
+    
+    .download-btn2 {
+        margin-top: 15px; /* Adjusts the button positioning under Xhorse XP-005 Dolphin Drivers */
+    }
+    
+    .download-btn1:hover, .download-btn2:hover {
+        background-color: #e65500; /* Darker shade on hover */
+        transform: translateY(-3px); /* Slight upward movement on hover */
+    }
+    
 
-.search-barmobile{
-    display: none;
-}
 
-.copy {
-    margin: 0;
-    padding: 10px 0;
-}
+    .footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+    
+    .copy {
+        text-align: center;
+        padding: 10px 0;
+    }
+    span {
+        color: #ff6c00;
+    }   
 
-span {
-    color: #ff6c00;
-}
-
-   
+    
 .mobile-menu{
     display: none;
 }
@@ -299,9 +301,6 @@ span {
         color: #fff;
         cursor: pointer;
         
-    }
-    .menubtn{
-        display: block;
     }
 }
 
@@ -368,8 +367,6 @@ span {
             border-radius: 25px 25px 25px 25px; /* Rounded corners on the right side of the button */
             
         }
-
-        
         
         .search-barmobile button:hover {
             background-color: #e55c00;
@@ -517,7 +514,7 @@ span {
     }
 
     /* Image styling */
-    .vimages {
+    .Dimages {
         width: 100%;
         max-width: 350px;
         height: auto;
@@ -550,7 +547,7 @@ span {
 
     /* Download buttons */
     .download-btn1, .download-btn2 {
-        width: 110%; /* Make the buttons take full width */
+        width: 50%; /* Make the buttons take full width */
         max-width: 350px; /* Ensure they don't exceed a maximum width */
         padding: 12px 20px;
         background-color: #ff6600;
@@ -561,23 +558,19 @@ span {
         font-family: 'Poppins', sans-serif;
         font-weight: bold;
         margin: 10px auto; /* Center the buttons with auto margins */
-        margin-left: -14px;
+        margin-left: -10px;
         text-align: center;
-        
     
         
     }
     .btn{
-        display: flex;
-    
+        margin-left: 90px;
         justify-content: center;
+        padding-left: -5px;
         margin-top: 10px;
-        padding-left: 20px;
-        text-align: center;
-        
     }
 
-    .download-contianer{
+    .con{
         margin: 20px 0;
         margin-left: 0;
         margin-top: 300px;
@@ -585,17 +578,15 @@ span {
     
 
     /* Device list */
-    .features-container {
+    .devices {
         margin: 20px 0;
         margin-left: 0;
         margin-top: -20px;
         
-        
     }
 
-    .features-container li {
+    .devices li {
         margin-bottom: 10px;
         padding-left: 0;
-        text-align: center;
     }
 }
