@@ -9,6 +9,7 @@
     padding: 10px 0; /* Reduced padding */
 }
 
+
 /* Header Styling */
 .header {
     background-color: #333;
@@ -367,6 +368,8 @@ span {
             border-radius: 25px 25px 25px 25px; /* Rounded corners on the right side of the button */
             
         }
+
+        
         
         .search-barmobile button:hover {
             background-color: #e55c00;
@@ -547,7 +550,7 @@ span {
 
     /* Download buttons */
     .download-btn1, .download-btn2 {
-        width: 120%; /* Make the buttons take full width */
+        width: 110%; /* Make the buttons take full width */
         max-width: 350px; /* Ensure they don't exceed a maximum width */
         padding: 12px 20px;
         background-color: #ff6600;
@@ -569,7 +572,7 @@ span {
     
         justify-content: center;
         margin-top: 10px;
-        margin-right: -10px;
+        padding-left: 20px;
         text-align: center;
         
     }
