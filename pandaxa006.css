@@ -136,6 +136,7 @@ body {
     padding: 0;
 }
 
+
 .header1 {
     background: linear-gradient(to right, #b91d2d, #ff6600);
     padding: 30px;
@@ -263,6 +264,10 @@ body {
     background-color: #b91d2d;
 }
 
+.image-section img{
+    width: 500px;
+}
+
 /* Footer */
 .footer {
     background-color: #333;
@@ -287,6 +292,18 @@ body {
 @media (max-width: 768px) {
     .main-nav {
         display: none; /* Hide main nav on mobile */
+    }
+    .vimages img{
+        width: fit-content;
+    }
+    .product-container img{
+        width: fit-content;
+    }
+    #miniprog img{
+        width: 350px;
+        height: auto;
+        margin-left: -25px;
+        
     }
 
     .mobile-menu-toggle {
