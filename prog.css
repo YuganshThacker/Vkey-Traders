@@ -9,6 +9,7 @@
     padding: 10px 0; /* Reduced padding */
 }
 
+
 /* Remove blue outline and focus effects */
 button, a, input, textarea {
     outline: none;
@@ -30,6 +31,7 @@ button:active, a:active, input:active, textarea:active {
     outline: none;
     box-shadow: none; /* Removes blue border on active state */
 }
+
 /* Header Styling */
 .header {
     background-color: #333;
