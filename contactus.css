@@ -9,6 +9,29 @@
     padding: 10px 0; 
 }
 
+
+/* Remove blue outline and focus effects */
+button, a, input, textarea {
+    outline: none;
+    box-shadow: none; /* Remove any default focus shadow effect */
+    -webkit-tap-highlight-color: transparent; /* Prevent blue highlight on mobile */
+}
+
+button:focus, a:focus, input:focus, textarea:focus {
+    outline: none;
+    box-shadow: none; /* Remove any focus shadow effect */
+}
+
+button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible {
+    outline: none;
+    box-shadow: none; /* Ensures the border is removed on click in all browsers */
+}
+
+button:active, a:active, input:active, textarea:active {
+    outline: none;
+    box-shadow: none; /* Removes blue border on active state */
+}
+
 .header {
     background-color: #333;
     padding: 10px 0;
