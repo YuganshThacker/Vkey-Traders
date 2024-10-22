@@ -985,4 +985,13 @@ span {
     }
 
   }
+  /* Media query for OnePlus 12R and similar devices */
+@media only screen and (min-device-width: 410px) and (max-device-width: 430px) {
+    .carousel-slide {
+        padding: 0;
+        justify-content: center;
+        margin-left: 13px;        
+    }
+
+  }
   
