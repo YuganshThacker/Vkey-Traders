@@ -965,10 +965,10 @@ span {
         margin-left: 5px;
     }
     .menubtn button{
-      font-size: 25px;
+      font-size: 30px;
       font-family: 'Poppins', sans-serif;
     }
-        
+
       .carousel-box {
         width: 320px;
         height: 300px;
@@ -983,7 +983,6 @@ span {
         border: 1px solid #ddd;
         border-radius: 8px;
     }
-    
-    
+
   }
   
