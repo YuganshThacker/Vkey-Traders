@@ -874,3 +874,86 @@ span {
     }
 }
 
+/* General Mobile Styling for screens up to 768px */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    
+    .about-us .container {
+        margin-right: 0;
+        max-width: 100%; /* Full width About Us section */
+    }
+
+    
+    .product-grid {
+        flex-direction: column;
+        gap: 10px; /* Less space between product items */
+    }
+
+    .product-item img {
+        height: auto; /* Auto height for product images */
+    }
+
+    .footer {
+        padding: 15px 0;
+    }
+
+    .copy {
+        font-size: 0.9em;
+    }
+}
+/* Styling for tablets (between 769px and 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        padding: 15px 0; /* Slightly more padding for tablets */
+    }
+
+    .logo img {
+        width: 60px; /* Adjust logo size for tablets */
+    }
+
+    .carousel-box {
+        width: 80%; /* Carousel width reduced for better visibility */
+        height: 300px;
+    }
+
+    .about-us h2 {
+        font-size: 2em; /* Reduce About Us heading size */
+    }
+
+    .product-grid {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .product-item {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+/* Disable hover effects on touch devices */
+@media (hover: none) {
+    .product-item:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .see-more-btn:hover {
+        background-color: #ff6600; /* Default background */
+    }
+}
