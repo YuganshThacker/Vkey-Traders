@@ -874,110 +874,123 @@ span {
     }
 }
 
-/* iPhone-specific media query */
-@media screen and (device-width: 390px) and (device-height: 844px), 
-       screen and (device-width: 428px) and (device-height: 926px),
-       screen and (device-width: 430px) and (device-height: 932px) {
-    
-    /* Navigation adjustments */
-    .header {
-        padding: 15px 0;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 1000;
-    }
-
-    .logo img {
-        width: 50px;
-        height: auto;
-    }
-
+/* Adjust logo text size for iPhone */
+@media (max-width: 393px) {
     .logo h1 {
-        font-size: 24px;
-        margin-left: 8px;
+        font-size: 24px; /* Reduced font size */
+        white-space: nowrap; /* Prevent text wrapping */
+        margin-left: 5px;
     }
 
-    /* Adjust container padding to account for fixed header */
+    /* Adjust logo image size */
+    .logo img {
+        width: 50px; /* Smaller logo size */
+        height: auto;
+        margin-right: 5px;
+    }
+
+    /* Fix navigation spacing */
     .container {
-        padding-top: 70px;
+        padding: 5px 10px;
         width: 95%;
     }
 
-    /* Mobile menu button positioning */
-    .mobile-menu-toggle {
-        top: 50%;
-        right: 20px;
-        transform: translateY(-50%);
-    }
-
-    /* Image size adjustments */
+    /* Adjust carousel for iPhone */
     .carousel-box {
-        width: 340px;
-        height: 340px;
+        width: 300px; /* Adjusted width for iPhone */
+        height: 300px;
         margin: 0 auto;
     }
 
+    .carousel-slide {
+        justify-content: center;
+    }
+
     .carousel-box img {
-        max-width: 90%;
-        max-height: 90%;
+        max-width: 85%;
+        max-height: 85%;
         object-fit: contain;
+        
     }
 
-    /* Search bar mobile optimization */
-    .search-barmobile {
-        width: 85%;
-        margin: 15px auto;
-    }
-
-    .search-barmobile input {
-        height: 40px;
-        font-size: 16px; /* Prevents zoom on iOS */
-        padding: 0 15px;
-    }
-
-    /* Mobile menu refinements */
-    .mobile-menu {
-        width: 280px;
-        padding-top: 60px;
-    }
-
-    .mobile-menu ul li a {
-        padding: 12px 20px;
-        font-size: 16px;
-    }
-
-    /* Ensure proper spacing below fixed header */
-    body {
-        padding-top: 60px;
-    }
-
-    /* Adjust carousel navigation for better touch targets */
+    /* Adjust carousel navigation arrows */
     .carousel-arrow {
-        width: 44px; /* Minimum touch target size for iOS */
-        height: 44px;
-        border-radius: 22px;
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
     }
 
     .left-arrow {
-        left: 10px;
+        left: 2%;
     }
 
     .right-arrow {
-        right: 10px;
+        right: 2%;
+    }
+
+    /* Fix first carousel box margin */
+    .carousel-slide .carousel-box:first-child {
+        margin-left: 15px;
     }
 }
 
-/* Safe area insets for iPhone devices with notch/Dynamic Island */
-@supports (padding: max(0px)) {
-    .header {
-        padding-top: max(15px, env(safe-area-inset-top));
-        padding-left: env(safe-area-inset-left);
-        padding-right: env(safe-area-inset-right);
+/* Specific adjustments for iPhone 14 Pro (393 x 852) */
+@media only screen 
+    and (device-width: 430px) 
+    and (device-height: 932px) 
+    and (-webkit-device-pixel-ratio: 3) {
+    
+    .logo h1 {
+        font-size: 30px; /* Even smaller for iPhone 14 Pro */
+        margin-left: 10px;
+    }
+    .logo img {
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+    .menubtn {
+        display: block; /* Ensure it's visible on mobile */
+        position: absolute;
+        top: 45px; /* Adjust position for iPhone 14 Pro */
+        right: 40px; /* Align to the right */
+        background-color: transparent; /* No background */
+        border: none; /* No border */
+        cursor: pointer;
+        z-index: 1000; /* Ensure it stays on top */
+    
+    }
+    .carousel-box {
+        width: 350px; /* Slightly smaller for iPhone 14 Pro */
+        height: 380px;
+        
+    }
+    
+
+    /* Ensure carousel is centered */
+    .carousel-slide {
+        padding: 0;
+        display: flex;
+        justify-content: center;
     }
 
+    /* Adjust container padding */
+    .container {
+        padding: 5px;
+        width: 98%;
+    }
+}
+
+/* Fix mobile menu positioning */
+@media (max-width: 768px) {
     .mobile-menu {
-        padding-top: max(60px, env(safe-area-inset-top));
-        padding-right: env(safe-area-inset-right);
+        width: 80%; /* Adjust width for better mobile view */
+        max-width: 300px;
+    }
+
+    .mobile-menu-toggle {
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
     }
 }
+
