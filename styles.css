@@ -741,11 +741,13 @@ span {
         .carousel {
             margin: 20px 0;
         }
-    
         .carousel-slide {
             padding: 0;
             justify-content: center;
+            
         }
+
+
     
         .carousel-box {
             width: 280px;
@@ -957,3 +959,31 @@ span {
         background-color: #ff6600; /* Default background */
     }
 }
+/* Media query for iPhone 15 (both base and Pro models) */
+@media only screen and (min-device-width: 390px) and (max-device-width: 430px) {
+    .logo h1{
+        margin-left: 5px;
+    }
+    .menubtn button{
+      font-size: 25px;
+      font-family: 'Poppins', sans-serif;
+    }
+        
+      .carousel-box {
+        width: 320px;
+        height: 300px;
+        margin: 0 auto;
+        padding: 10px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        background-color: white !important;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+    
+    
+  }
+  
