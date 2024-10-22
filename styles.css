@@ -193,7 +193,7 @@ body {
     display: flex;
     min-width: 100%;
     box-sizing: border-box;
-    margin-left: 10px;   
+       
 }
 .carousel-box {
     width: 400px; /* Set a fixed width for all boxes */
