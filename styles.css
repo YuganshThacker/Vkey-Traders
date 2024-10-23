@@ -755,6 +755,7 @@ span {
 
     
         .carousel-box {
+        
             width: 280px;
             height: 280px;
             margin: 0 auto;
@@ -1048,6 +1049,20 @@ span {
 body {
     font-family: 'Poppins', sans-serif;
 }
+
+
+@media (max-width: 349px) {
+    body {
+        .carousel-box {
+            width: 280px!important; /* Reduced width to fit smaller screen */
+            height: 280px!important; /* Adjusted height to maintain aspect ratio */
+            
+         
+        }
+        
+    }
+}
+
 
 @media (max-width: 360px) {
     body {
