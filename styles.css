@@ -1054,8 +1054,8 @@ body {
 @media (max-width: 349px) {
     body {
         .carousel-box {
-            width: 280px!important; /* Reduced width to fit smaller screen */
-            height: 280px!important; /* Adjusted height to maintain aspect ratio */
+            width: 260px!important; /* Reduced width to fit smaller screen */
+            height: 260px!important; /* Adjusted height to maintain aspect ratio */
             
          
         }
