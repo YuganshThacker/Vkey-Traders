@@ -615,3 +615,69 @@ body {
         padding-left: 0;
     }
 }
+@media (max-width: 768px) {
+    /* Make the text responsive */
+    .content-list p {
+        font-size: 20px; /* Smaller font size for mobile */
+        margin-bottom: 20px;
+        font-weight: bold;
+        text-align: center; /* Center the text on mobile */
+    }
+
+    /* Center and adjust the size of the button on mobile/tablet */
+    .dev2 {
+        width: 80%; /* Make the button take 80% width of the screen */
+        max-width: 350px; /* Limit the maximum width */
+        margin: 20px auto; /* Center the button and add margin around it */
+        text-align: center;
+        padding: 12px 20px; /* Adjust padding for mobile */
+        font-size: 16px; /* Adjust font size for readability */
+        display: block; /* Ensure it's a block element */
+    }
+    .dev2 button{
+        margin-left: 15px;
+    }
+
+    /* For additional spacing and layout adjustments */
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        
+        
+        margin-top: 20px;
+        
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 360px) {
+    /* Center and adjust the size of the button on mobile/tablet */
+    .dev2 {
+        width: 80%; /* Make the button take 80% width of the screen */
+        max-width: 350px; /* Limit the maximum width */
+        margin: 20px auto; /* Center the button and add margin around it */
+        text-align: center;
+        padding: 12px 20px; /* Adjust padding for mobile */
+        font-size: 16px; /* Adjust font size for readability */
+        display: block; /* Ensure it's a block element */
+    }
+    .dev2 button{
+        margin-left: -1px;
+        padding-right: 85px;
+        
+    }
+}
+
+/* Mobile Devices (360px to 400px) */
+@media (min-width: 360px) and (max-width: 400px) {
+    .image-section img {
+        max-width: 350px;
+    }
+}
+
+/* Medium Mobile Devices */
+@media (min-width: 400px) and (max-width: 768px) {
+    .image-section img {
+        max-width: 550px;
+    }
+}
