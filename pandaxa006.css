@@ -31,6 +31,9 @@ button:active, a:active, input:active, textarea:active {
     box-shadow: none; /* Removes blue border on active state */
 }
 
+
+
+
 /* Header Styling */
 .header {
     background-color: #333;
@@ -542,9 +545,11 @@ body {
     }
 
     .image-section img{
-        width: 350px;
+        display: flex;
+        width: 352px;
         margin-left: -25px;
         height: fit-content;
+        
     }
 
    }
