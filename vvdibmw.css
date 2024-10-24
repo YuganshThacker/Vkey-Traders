@@ -31,6 +31,9 @@ button:active, a:active, input:active, textarea:active {
     box-shadow: none; /* Removes blue border on active state */
 }
 
+
+
+
 /* Header Styling */
 .header {
     background-color: #333;
@@ -356,7 +359,7 @@ span {
         .search-barmobile {
             display: flex;
             align-items: center;
-            max-width: 400px;
+            max-width: 800px;
             margin: 20px 20px 15px 15px;
             background-color: #f8f8f8;
             border: 1px solid #e0e0e0;
