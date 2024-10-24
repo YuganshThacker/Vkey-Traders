@@ -9,7 +9,6 @@
     padding: 10px 0; /* Reduced padding */
 }
 
-
 /* Remove blue outline and focus effects */
 button, a, input, textarea {
     outline: none;
@@ -31,6 +30,9 @@ button:active, a:active, input:active, textarea:active {
     outline: none;
     box-shadow: none; /* Removes blue border on active state */
 }
+
+
+
 
 /* Header Styling */
 .header {
@@ -353,7 +355,7 @@ body {
         .search-barmobile {
             display: flex;
             align-items: center;
-            max-width: 400px;
+            max-width: 800px;
             margin: 20px 20px 15px 15px;
             background-color: #f8f8f8;
             border: 1px solid #e0e0e0;
