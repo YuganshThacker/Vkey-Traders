@@ -545,7 +545,7 @@ body {
     }
 
     .image-section img{
-        display: flex;
+ 
         width: 352px;
         margin-left: -25px;
         height: fit-content;
@@ -586,4 +586,125 @@ body {
     }
 
 } 
-  
+   /* Base styles */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+/* Base styles for all devices */
+.image-section img {
+    width: 100%;  /* Ensure the image takes full width of its container */
+    height: auto; /* Maintain the aspect ratio */
+ /* Set a maximum width so it doesn't stretch too much on larger screens */
+    display: block; /* Prevent inline block spacing issues */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+/* Small Mobile Devices */
+@media (max-width: 360px) {
+    .image-section img {
+        max-width: 300px; /* Slightly smaller on small devices */
+    }
+}
+
+/* Mobile Devices (360px to 400px) */
+@media (min-width: 360px) and (max-width: 400px) {
+    .image-section img {
+        max-width: 350px;
+    }
+}
+
+/* Medium Mobile Devices */
+@media (min-width: 400px) and (max-width: 768px) {
+    .image-section img {
+        max-width: 550px;
+    }
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .image-section img {
+        
+        max-width: 450px;
+    }
+   
+}
+@media (min-width: 821px) {
+    .image-section img {
+        max-width: 500px; /* Default size for larger screens */
+    }
+    
+}
+
+/* Laptops and Desktops */
+@media (min-width: 1025px) {
+    .image-section img {
+        max-width: 500px; /* Default size for larger screens */
+    }
+}
+
+/* Tablet Landscape */
+@media (min-width: 1025px) and (max-width: 1121px) {
+    body {
+      
+        .image-section img {
+            max-width: 500px; /* Default size for larger screens */
+        }
+    }
+}
+/* Tablet Landscape */
+@media (min-width: 1122px) and (max-width: 1280px) {
+    body {
+      
+        .image-section img {
+            max-width: 500px; /* Default size for larger screens */
+        }
+    }
+}
+
+/* Small Laptop/Desktops */
+@media (min-width: 1281px) and (max-width: 1440px) {
+    body {
+        background-color: lightgreen; /* Example style */
+    }
+}
+
+/* Large Desktops */
+@media (min-width: 1441px) {
+    body {
+      
+        .image-section img {
+            max-width: 500px; /* Default size for larger screens */
+        }
+    }
+    
+}
+/* Small Laptop/Desktops */
+@media (min-width: 1442px) and (max-width: 1540px) {
+    body {
+      
+        .image-section img {
+            max-width: 500px; /* Default size for larger screens */
+        }
+    }
+}
+
+/* Small Laptop/Desktops */
+@media (min-width: 1541px) and (max-width: 1560px) {
+    body {
+      
+        .image-section img {
+            max-width: 500px; /* Default size for larger screens */
+        }
+    }
+}
+
+
+/* Small Laptop/Desktops */
+@media (min-width: 1561px) and (max-width: 1576px) {
+    body {
+ 
+        .image-section img {
+            max-width: 500px; /* Default size for larger screens */
+        }
+    }
+}
